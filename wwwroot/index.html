@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style.css" />
+<title>Stole — Stories</title>
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="logo" id="refresh" title="Refresh stories"><span class="dot"></span><h1>Stole</h1></div>
+    <div class="user"><span id="meName">…</span><img class="user-img" id="meAvatar" alt="" /></div>
+  </header>
+
+  <div class="tray" id="tray"></div>
+
+  <div class="viewer-wrap" id="viewer" hidden>
+    <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+    <div class="viewer-media" id="media"></div>
+    <div class="viewer-caption" id="caption"></div>
+    <div class="view-banner" id="views" hidden></div>
+  </div>
+
+  <div class="create-panel">
+    <div id="signup" hidden>
+      <p class="hint">No profiles yet — create one to publish.</p>
+      <div class="form-row">
+        <label for="username">Display name</label>
+        <input id="username" type="text" maxlength="40" placeholder="e.g. idris" autocomplete="off" />
+      </div>
+      <button class="btn" id="createUser">Create profile</button>
+    </div>
+    <div id="create">
+      <div class="form-row">
+        <label for="type">Media type</label>
+        <select id="type"><option value="IMAGE">Image</option><option value="VIDEO">Video</option></select>
+      </div>
+      <div class="form-row">
+        <label for="url">Media URL</label>
+        <input id="url" type="url" placeholder="https://picsum.photos/720/1280" autocomplete="off" />
+      </div>
+      <div class="form-row">
+        <label for="text">Caption</label>
+        <input id="text" type="text" maxlength="140" placeholder="Say something…" autocomplete="off" />
+      </div>
+      <button class="btn" id="publish">Publish story</button>
+    </div>
+    <div class="status" id="status"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
