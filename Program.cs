@@ -19,7 +19,6 @@ builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
     .AddMutationType<Mutation>()
     .RegisterDbContextFactory<StoleDbContext>()
-    .AddInMemorySubscriptions();
 
 builder.Services.AddSingleton<RedisStoryService>();
 
